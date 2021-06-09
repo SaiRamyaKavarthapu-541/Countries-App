@@ -1,15 +1,15 @@
 
 import React, { Component } from 'react';
-import Data from '../mock/MockData'
+import Data from '../mock/countryRegionMock'
 import '../styles/App.css'
-import RegionCountryDropDown from './RegionCountryDropDown'
+import RegionCountryList from './regionCountryList'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <h1>{this.props.heading}</h1>
-        <RegionCountryDropDown Content={this.props.Content} />
+        <RegionCountryList Content={this.props.Content} />
       </div>
     );
   }
