@@ -3,15 +3,15 @@ import { getCountries } from "../actions/action-get-Countries"
 import { connect } from 'react-redux';
 import CountryDropDown from './common/CountryDropDown';
 export class RegionCountryDropDown extends Component {
-    
+
     componentDidMount() {
         this.setCountries(this.props.Content.countries[0].name);
     }
-     setCountries(name) {
-        this.props.getCountries(name);  
+    setCountries(name) {
+        this.props.getCountries(name);
     }
 
-   handleDropDown1Change(e) {
+    handleDropDown1Change(e) {
         e.preventDefault();
         this.setCountries(e.target.value);
     }
@@ -39,4 +39,4 @@ const mapStateToProps = (state) => {
 const mapDispatchProps = (dispatch) => ({
     getCountries: (name) => dispatch(getCountries(name))
 });
-export default connect(mapStateToProps, mapDispatchProps)(RegionCountryDropDown );
+export default connect(mapStateToProps, mapDispatchProps)(RegionCountryDropDown);
