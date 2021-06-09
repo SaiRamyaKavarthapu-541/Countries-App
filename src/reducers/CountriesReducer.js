@@ -5,10 +5,6 @@ const initialState = {
 };
 const countriesReducer = (state = initialState, { payload, type }) => {
   switch (type) {
-    case ACTION_TYPES.FETCH_STARTED:
-      return {
-        ...state,
-      };
     case ACTION_TYPES.FETCH_SUCCESS:
       return {
         ...state,
