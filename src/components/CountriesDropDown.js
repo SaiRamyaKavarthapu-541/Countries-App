@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { getCountries } from "../actions/action-get-Countries"
 import { connect } from 'react-redux';
-import CommonDropDown from './common/CommonDropDown';
+import CountryDropDown from './common/CountryDropDown';
 export class CountriesDropDown extends Component {
     constructor(props) {
         super(props);
@@ -38,9 +38,9 @@ export class CountriesDropDown extends Component {
         return (
             <div>
 
-                <CommonDropDown dropDownList={this.props.Content.countries} onChange={this.handleDropDown1Change.bind(this)} />
+                <CountryDropDown dropDownList={this.props.Content.countries} onChange={this.handleDropDown1Change.bind(this)} />
 
-                <CommonDropDown dropDownList={this.props.result} />
+                <CountryDropDown dropDownList={this.props.result} />
             </div>
         )
     }
