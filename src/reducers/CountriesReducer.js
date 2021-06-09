@@ -1,10 +1,9 @@
 import ACTION_TYPES from '../actions/actionTypes'
 const initialState = {
-  loading: false,
   result: [],
   error: null,
 };
-const mainReducer = (state = initialState, { payload, type }) => {
+const countriesReducer = (state = initialState, { payload, type }) => {
   switch (type) {
     case ACTION_TYPES.FETCH_STARTED:
       return {
@@ -25,7 +24,7 @@ const mainReducer = (state = initialState, { payload, type }) => {
       return state;
   }
 };
-export default mainReducer;
+export default countriesReducer;
 
 
 
